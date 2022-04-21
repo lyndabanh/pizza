@@ -1,0 +1,11 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    command: go run main.go
+    volumes:
+      - .:/src2/pizza
+    working_dir: /src2/pizza
+    ports:
+      - "3030:3030"
